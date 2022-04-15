@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -25,19 +26,41 @@ code {
 }
 
 header{
-  height: 3rem;
+  height: 55px;
   background-color: rgb(21, 21, 49);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 #search{
-  margin: 5px;
-  height: 30px;
+  height: 34px;
   background-color: rgb(27, 27, 79);
   color: white;
   border: none;
+  font-size: 15px;
   border-radius: 11px;
-  padding: 15px;
+  padding: 12px;
+  margin: 20px;
+}
+
+.movieTv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: 16px;
+  color: white;
+}
+
+
+#movieBtn,#tvBtn{
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+input:focus{
+  outline: none;
 }

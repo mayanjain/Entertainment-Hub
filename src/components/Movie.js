@@ -1,8 +1,16 @@
 import './Movie.css'
 const img_path = "https://image.tmdb.org/t/p/w1280"
 
-const Movie = ({ title, poster_path, overview, vote_average }) => {
-
+const Movie = (props) => {
+    const curPage=props.curPage;
+    let title;
+    if(curPage=="movie"){
+        title=props.title;
+    }
+    else title=props.name;
+    const poster_path=props.poster_path;
+    const vote_average=props.vote_average;
+    const overview=props.overview;
     return (
         <div className="movie">
             <img src={img_path + poster_path} alt={title} />

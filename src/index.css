@@ -61,6 +61,10 @@ header{
   transition: all 0.3s ease-in;
 }
 
+#movieBtn{
+  color:#ff3737;
+}
+
 input:focus{
   outline: none;
 }

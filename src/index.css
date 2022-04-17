@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -23,6 +22,7 @@ code {
 .movie-container{
   display: flex;
   flex-flow: wrap;
+  justify-content: flex-start;
 }
 
 header{
@@ -50,13 +50,13 @@ header{
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 200px;
+  width: 330px;
   margin: 16px;
   color: white;
 }
 
 
-#movieBtn,#tvBtn{
+#movieBtn,#tvBtn,#animeBtn{
   cursor: pointer;
   transition: all 0.3s ease-in;
 }

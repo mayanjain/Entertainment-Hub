@@ -11,7 +11,7 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(27, 27, 79);
+  background-color: rgba(0, 0, 0, 0.911);
 }
 
 code {
@@ -26,8 +26,8 @@ code {
 }
 
 header{
-  height: 55px;
-  background-color: rgb(21, 21, 49);
+  height: 60px;
+  /* background-color: rgb(21, 21, 49); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,36 +35,59 @@ header{
 
 #search{
   height: 34px;
-  background-color: rgb(27, 27, 79);
+  background-color: rgba(10, 10, 10, 0.441);
   color: white;
   border: none;
   font-size: 15px;
   border-radius: 11px;
   padding: 12px;
-  margin: 20px;
+  margin: 4px 24px 4px 2px;
 }
 
 .movieTv{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 330px;
-  margin: 16px;
+  margin: 10px;
   color: white;
 }
 
 
 #movieBtn,#tvBtn,#animeBtn{
   cursor: pointer;
+  padding: 10px;
   transition: all 0.3s ease-in;
+  color: rgb(159, 153, 153);
 }
 
 #movieBtn{
-  color:#ff3737;
+  color:white;
 }
 
 input:focus{
   outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  header{
+    flex-direction: column;
+    font-size: 15px;
+    height: fit-content;
+  }
+  #search{
+    font-size: small;
+    margin: 5px 10px 10px 10px;
+  }
+  .movieTv{
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  .movie-container{
+    justify-content: center;
+  }
+/* line: none; */
 }

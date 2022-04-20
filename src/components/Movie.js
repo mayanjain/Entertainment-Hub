@@ -10,19 +10,25 @@ const Movie = (props) => {
     else title=props.title;
     if(curPage=="anime"){
         poster_path=props.image_url;
-        vote_average=props.score;
+        vote_average=String(props.score);
     }
     else{
         poster_path=img_path+props.poster_path;
-        vote_average=props.vote_average;
+        vote_average=String(props.vote_average);
     }
+    
+    if(vote_average.length==1)vote_average+='.';
+    while(vote_average.length<4)vote_average+='0';
+    vote_average=vote_average.slice(0,3);
+
     const overview=props.overview;
+
     return (
         <div className="movie">
             <img src={poster_path} alt={title} />
             <div className="movie-info">
                 <h4>{title}</h4>
-                <div id="vote">{vote_average}</div>
+                <div id="vote">{"⭐"+vote_average}</div>
             </div>
             <div className="overview">
                 <h2>Overview:</h2>

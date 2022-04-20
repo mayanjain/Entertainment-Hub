@@ -39,10 +39,10 @@ function MovieList() {
     if(curPage==="movie")return;
     let tvBtn=document.getElementById('tvBtn');
     let animeBtn=document.getElementById('animeBtn');
-    tvBtn.style.color='white';
-    animeBtn.style.color='white';
+    tvBtn.style.color='rgb(159, 153, 153)';
+    animeBtn.style.color='rgb(159, 153, 153)';
     let movieBtn=document.getElementById('movieBtn');
-    movieBtn.style.color='#ff3737';
+    movieBtn.style.color='white';
     setCurPage("movie");
     getMovies(popular);
   }
@@ -51,10 +51,10 @@ function MovieList() {
     if(curPage==="tv")return;
     let movieBtn=document.getElementById('movieBtn');
     let animeBtn=document.getElementById('animeBtn');
-    movieBtn.style.color='white';
-    animeBtn.style.color='white';
+    movieBtn.style.color='rgb(159, 153, 153)';
+    animeBtn.style.color='rgb(159, 153, 153)';
     let tvBtn=document.getElementById('tvBtn');
-    tvBtn.style.color='#ff3737';
+    tvBtn.style.color='white';
     setCurPage("tv");
     getMovies(popularTv);
   }
@@ -63,10 +63,10 @@ function MovieList() {
     if(curPage==="anime")return;
     let movieBtn=document.getElementById('movieBtn');
     let tvBtn=document.getElementById('tvBtn');
-    movieBtn.style.color='white';
-    tvBtn.style.color='white';
+    movieBtn.style.color='rgb(159, 153, 153)';
+    tvBtn.style.color='rgb(159, 153, 153)';
     let animeBtn=document.getElementById('animeBtn');
-    animeBtn.style.color='#ff3737';
+    animeBtn.style.color='white';
     setCurPage("anime");
     getMovies(popular_anime);
   }
@@ -97,7 +97,7 @@ function MovieList() {
       <div className="movie-container">
         {
           movies.map((movie) => (
-            <Movie key={movie.title} {...movie} curPage={curPage} />
+            <Movie key={movie.id?movie.id:movie.mal_id}  {...movie} curPage={curPage} />
           ))
         }
       </div>

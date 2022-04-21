@@ -20,17 +20,25 @@ const Movie = (props) => {
     if(vote_average.length==1)vote_average+='.';
     while(vote_average.length<4)vote_average+='0';
     vote_average=vote_average.slice(0,3);
-
     const overview=props.overview;
+
+    const handleClick = ()=>{
+        document.getElementById(props.id).classList.add("overview-click");
+        document.getElementById(props.id).classList.remove("overview");
+        setTimeout(()=>{
+            document.getElementById(props.id).classList.add("overview");
+            document.getElementById(props.id).classList.remove("overview-click");
+        },3000)
+    }
 
     return (
         <div className="movie">
             <img src={poster_path} alt={title} />
-            <div className="movie-info">
+            <div className="movie-info"  onClick={handleClick}>
                 <h4>{title}</h4>
                 <div id="vote">{"⭐"+vote_average}</div>
             </div>
-            <div className="overview">
+            <div className="overview" id={props.id}>
                 <h2>Overview:</h2>
                 <p>{overview}</p>
             </div>

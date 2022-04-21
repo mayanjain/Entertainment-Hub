@@ -6,7 +6,6 @@ const popular = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.
 const search_api = `https://api.themoviedb.org/3/search/movie?&api_key=${api_key}&query=`
 const popularTv = `https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=${api_key}&page=1`
 const search_api_Tv = `https://api.themoviedb.org/3/search/tv?&api_key=${api_key}&query=`
-const img_path = "https://image.tmdb.org/t/p/w500"
 const popular_anime = "https://api.jikan.moe/v3/top/anime"
 const search_api_anime = "https://api.jikan.moe/v3/search/anime?q="
 
@@ -97,7 +96,7 @@ function MovieList() {
       <div className="movie-container">
         {
           movies.map((movie) => (
-            <Movie key={movie.id?movie.id:movie.mal_id}  {...movie} curPage={curPage} />
+            <Movie key={movie.id?movie.id:movie.mal_id} id={movie.id?movie.id:movie.mal_id}  {...movie} curPage={curPage} />
           ))
         }
       </div>

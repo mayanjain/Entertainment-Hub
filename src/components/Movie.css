@@ -3,12 +3,12 @@
     flex-direction: column;
     width: 220px;
     margin: 1rem;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.433);
     color: white;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 2px 0px 8px 4px rgba(0, 0, 0, 0.214);
+    box-shadow: 2px 0px 8px 4px rgba(0, 0, 0, 0.373);
 }
 
 .movie img{
@@ -37,7 +37,7 @@
 .overview{
     padding: 10px;
     background-color: white;
-    color: rgb(55, 55, 137);
+    color: rgb(8, 8, 34);
     max-height: 100%;
     overflow: auto;
     position: absolute;
@@ -51,7 +51,7 @@
 .overview-click{
     padding: 10px;
     background-color: white;
-    color: rgb(55, 55, 137);
+    color: rgb(4, 4, 18);
     max-height: 100%;
     overflow: auto;
     position: absolute;
